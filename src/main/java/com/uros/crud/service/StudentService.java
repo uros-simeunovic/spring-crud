@@ -11,13 +11,11 @@ import java.util.List;
 public class StudentService {
 
     @Autowired
-    private final StudentRepository studentRepository;
+    private StudentRepository studentRepository;
 
-    public StudentService(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
-    }
 
     public List<Student> getStudents() {
         return studentRepository.findAll();
     }
+
 }
